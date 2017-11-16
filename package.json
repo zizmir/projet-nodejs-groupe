@@ -1,0 +1,22 @@
+{
+  "name": "projet-nodejs-groupe",
+  "version": "1.0.0",
+  "description": "projet groupe",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zizmir/projet-nodejs-groupe.git"
+  },
+  "author": "mbark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zizmir/projet-nodejs-groupe/issues"
+  },
+  "homepage": "https://github.com/zizmir/projet-nodejs-groupe#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
