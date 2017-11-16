@@ -1,29 +1,24 @@
-//
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 
-// creating a db object
 let db = {};
 
-// connexion to the db
-db.Sequelize = new Sequelize('database', 'username', '', {
+db.sequelize = new Sequelize('database', 'username', '', {
   host: 'localhost',
   dialect: 'postgres'
 });
 
-//
 let model_pathname = path.join(__dirname, 'models');
 
-//
 fs
   .readdirSync(model_pathname)
   .filter((filename) => {
-    return (filename.indexOf('.') !== 0);
+    return (filename.indexOf(".") !== 0) && (filename !== "init.js");
   })
   .forEach((filename) => {
-    let mode = db.Sequelize.import(path.join(model_pathname, filename));
+    let model = db.sequelize.import(path.join(model_pathname, filename));
+    db[model.name] = model;
   });
 
-//
 module.exports = db;
