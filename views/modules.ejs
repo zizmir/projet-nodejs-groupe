@@ -1,39 +1,40 @@
 <% extend('layout') %>
-
-  <section class="hero is-primary">
-    <h1 class="title">Modules</h1>
-    <div class="container">
-      <table class="table is-striped">
-        <thead>
-          <tr>
-            <th>Subject</th>
-            <th>Teacher</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% for (var i = 0; i < modules.length; i++) { %>
+  <section class="hero is-fullheight is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Modules</h1>
+        <table class="table is-striped">
+          <thead>
             <tr>
-              <td>
-                <%= modules[i].subject %>
-              </td>
-              <td>
-                <%= modules[i].teacher %>
-              </td>
-              <td>
-                <p class="field">
+              <th>Subject</th>
+              <th>Teacher</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (var i = 0; i < modules.length; i++) { %>
+              <tr>
+                <td>
+                  <%= modules[i].subject %>
+                </td>
+                <td>
+                  <%= modules[i].teacher %>
+                </td>
+                <td>
+                  <p class="field">
 
-                  <a class="button is-small <%=(modules[i].state== true) ? " is-success " : "is-danger " %>">
-                    <span class="icon is-small">
+                    <a class="button is-small <%=(modules[i].state== true) ? " is-success " : "is-danger " %>">
+                      <span class="icon is-small">
                       <i class="mdi mdi-plus"></i>
                     </span>
-                  </a>
+                    </a>
 
-                </p>
-              </td>
-            </tr>
-            <% } %>
-        </tbody>
-      </table>
+                  </p>
+                </td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>

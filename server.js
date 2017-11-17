@@ -31,10 +31,7 @@ app.use(session({
 app.use('/', index);
 app.use('/users', users);
 app.use('/modules', modules);
-<<<<<<< HEAD
-=======
 app.use('/profile', profile);
->>>>>>> feature/routes-modules
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
