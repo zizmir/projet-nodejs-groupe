@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt');
+
 module.exports = (sequelize, DataTypes) => {
 
   let users = sequelize.define('user', {
@@ -10,14 +12,29 @@ module.exports = (sequelize, DataTypes) => {
     phone_number:DataTypes.STRING,
     password_confirm:DataTypes.VIRTUAL
 
+  },{
+      hooks:{
+        beforeCreate: function(){
+            //if(user.password != user.password_confirm){
+            //    throw("Error password doesn't match!");
+            //}
+
+            let salt = bcrypt.genSaltSync();
+            user.password= bcrypt.hashSync(user.password, salt);
+        }
+
+      }
   });
-    // users.prototype.checkPassword((user)=>{
-    //
-    //
-    //
-    //
-    //
-    // });
+
+  users.prototype.checkPassword= (user)=>{
+      let status = false ;
+        if(this.password == user.password){
+            status = true;
+        }else{
+            status = false
+        }
+        return status;
+    };
   return users;
 };
 

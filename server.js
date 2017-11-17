@@ -3,6 +3,7 @@ const path = require('path');
 const moment = require('moment');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
+const session = require('express-session');
 
 const db = require('./database/init');
 
@@ -22,10 +23,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
+
+app.use(session({
+  secret: 'keyboard cat'
+}));
 app.use('/', index);
 app.use('/users', users);
-app.use('/modules', modules)
-  // catch 404 and forward to error handler
+app.use('/modules', modules);
+
+// catch 404 and forward to error handler
 app.use((req, res, next) => {
   let err = new Error('Not Found');
   err.status = 404;
