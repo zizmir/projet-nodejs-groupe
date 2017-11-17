@@ -12,7 +12,7 @@ const users = require('./routes/users');
 const modules = require('./routes/modules');
 
 const port = process.argv[2] || '4242';
-
+app.engine('ejs', require('express-ejs-extend')); 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
