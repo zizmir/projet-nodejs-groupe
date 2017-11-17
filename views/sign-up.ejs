@@ -1,0 +1,64 @@
+
+ <% extend('layout') %>
+
+    <section class="hero is-fullheight is-info">
+
+
+
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="column is-4 is-offset-4">
+            <h3 class="title">Sign in </h3>
+            <div class="box">
+              <figure class="avatar">
+                <img src="./img/darkvador.png" />
+              </figure>
+              <form id="mForm" method="POST" action="/sign-up" enctype="application/json">
+              <div class="field">
+                  <label class="label has-text-left">Username</label>
+                  <div class="control">
+                    <input name="username" class="input is-large" type="text" placeholder="your username" autofocus="" />
+                  </div>
+                </div> 
+              	<div class="field">
+                  <label class="label has-text-left">firstname</label>
+                  <div class="control">
+                    <input name="firstname" class="input is-large" type="text" placeholder="your firstname" autofocus="" />
+                  </div>            	
+              	<div class="field">
+                  <label class="label has-text-left">lastname</label>
+                  <div class="control">
+                    <input name="lastname" class="input is-large" type="text" placeholder="your lastname" autofocus="" />
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label has-text-left">Email</label>
+                  <div class="control">
+                    <input name="email" class="input is-large" type="email" placeholder="your email" autofocus="" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <label class="label has-text-left">Password</label>
+                    <input name="password" class="input is-large" type="password" placeholder="your passsword" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <label class="label has-text-left">Passeword confirm</label>
+                    <input name="password_confirm" class="input is-large" type="password" placeholder="your password_confirm" />
+                  </div>
+                </div>
+                <a class="button is-block is-info is-large is-success" onclick="document.getElementById('mForm').submit();" >
+                  Register
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+ 

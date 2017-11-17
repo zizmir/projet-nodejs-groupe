@@ -6,10 +6,19 @@ module.exports = (sequelize, DataTypes) => {
     lastname: DataTypes.STRING,
     email:DataTypes.STRING,
     birthday:DataTypes.DATE,
-    passeword:DataTypes.STRING,
-    phone_number:DataTypes.STRING
+    password:DataTypes.STRING,
+    phone_number:DataTypes.STRING,
+    password_confirm:DataTypes.VIRTUAL
 
   });
-
+    // users.prototype.checkPassword((user)=>{
+    //
+    //
+    //
+    //
+    //
+    // });
   return users;
 };
+
+
