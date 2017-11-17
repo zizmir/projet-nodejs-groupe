@@ -1,10 +1,37 @@
 <% extend('layout') %>
-  <section class="hero is-fullheight is-primary">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h3 class="title is-2">
-          <p>Hello module</p>
-        </h3>
-      </div>
-    </div>
+
+  <section class="hero is-primary">
+    <h1 class="title">Modules</h1>
+    <dic class="container">
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Teacher</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i = 0; i < fakedata.length; i++) { %>
+            <tr>
+              <td>
+                <%= fakedata[i].subject %>
+              </td>
+              <td>
+                <%= fakedata[i].teacher %>
+              </td>
+              <td>
+                <p class="field">
+                  <a class="button is-small <%=(fakedata[i].state== true) ? " is-success " : "is-danger " %>">
+                    <span class="icon is-small">
+                      <i class="mdi mdi-plus"></i>
+                    </span>
+                  </a>
+                </p>
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+    </dic>
   </section>
