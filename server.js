@@ -12,6 +12,7 @@ const app = express();
 const index = require('./routes/index');
 const users = require('./routes/users');
 const modules = require('./routes/modules');
+const profile = require('./routes/profile');
 
 const port = process.argv[2] || '4242';
 app.engine('ejs', require('express-ejs-extend'));
@@ -30,6 +31,10 @@ app.use(session({
 app.use('/', index);
 app.use('/users', users);
 app.use('/modules', modules);
+<<<<<<< HEAD
+=======
+app.use('/profile', profile);
+>>>>>>> feature/routes-modules
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
