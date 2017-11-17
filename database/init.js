@@ -23,4 +23,7 @@ fs
     db[model.name] = model;
   });
 
+// relationship
+db.user.belongsToMany(db.module, { through: 'users_modules' });
+
 module.exports = db;

@@ -1,66 +1,66 @@
 {
   "modules": [{
-      "name": "Introduction au Javascript",
+      "subject": "Introduction au Javascript",
       "teacher": "Majdi Toumi"
     },
     {
-      "name": "Javascript avancee",
+      "subject": "Javascript avancee",
       "teacher": "Majdi Toumi"
     },
     {
-      "name": "Node js",
+      "subject": "Node js",
       "teacher": "Majdi Toumi"
     },
     {
-      "name": "Javascript user interfaces",
+      "subject": "Javascript user interfaces",
       "teacher": "Majdi Toumi"
     },
     {
-      "name": "Algorithmie avancée",
+      "subject": "Algorithmie avancée",
       "teacher": "Marc Boussoulade"
     },
     {
-      "name": "Bases de données relationnelle + NoSQL",
+      "subject": "Bases de données relationnelle + NoSQL",
       "teacher": "Christophe Ollivier"
     },
     {
-      "name": "Architectures n-tiers",
+      "subject": "Architectures n-tiers",
       "teacher": "Sami Radi"
     },
     {
-      "name": "Sécurite informatique",
+      "subject": "Sécurite informatique",
       "teacher": "Majdi Toumi"
     },
     {
-      "name": "iOS",
+      "subject": "iOS",
       "teacher": "Pierre-Yves Touzain"
     },
     {
-      "name": "Cross-platforme",
+      "subject": "Cross-platforme",
       "teacher": "Majdi Toumi"
     },
     {
-      "name": "Ui/x design",
+      "subject": "Ui/x design",
       "teacher": "Gui Perrier"
     },
     {
-      "name": "Management & communication",
+      "subject": "Management & communication",
       "teacher": "Caroline Richshoffer Dagorne"
     },
     {
-      "name": "Scrum",
+      "subject": "Scrum",
       "teacher": "Alexandra Tritz"
     },
     {
-      "name": "Cahier des charges fonctionnel",
+      "subject": "Cahier des charges fonctionnel",
       "teacher": "Julie Poupat"
     },
     {
-      "name": "Cahier des charges technique",
+      "subject": "Cahier des charges technique",
       "teacher": "Majdi Toumi"
     },
     {
-      "name": "Prototypage et MVP",
+      "subject": "Prototypage et MVP",
       "teacher": "Julie Poupat"
     }
   ]

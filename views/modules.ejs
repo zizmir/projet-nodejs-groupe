@@ -2,27 +2,27 @@
 
   <section class="hero is-primary">
     <h1 class="title">Modules</h1>
-    <dic class="container">
+    <div class="container">
       <table class="table is-striped">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Subject</th>
             <th>Teacher</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          <% for (var i = 0; i < fakedata.length; i++) { %>
+          <% for (var i = 0; i < modules.length; i++) { %>
             <tr>
               <td>
-                <%= fakedata[i].subject %>
+                <%= modules[i].subject %>
               </td>
               <td>
-                <%= fakedata[i].teacher %>
+                <%= modules[i].teacher %>
               </td>
               <td>
                 <p class="field">
-                  <a class="button is-small <%=(fakedata[i].state== true) ? " is-success " : "is-danger " %>">
+                  <a class="button is-small <%=(modules[i].state== true) ? " is-success " : "is-danger " %>">
                     <span class="icon is-small">
                       <i class="mdi mdi-plus"></i>
                     </span>
@@ -33,5 +33,5 @@
             <% } %>
         </tbody>
       </table>
-    </dic>
+    </div>
   </section>

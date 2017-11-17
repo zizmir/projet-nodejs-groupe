@@ -6,32 +6,11 @@ const db = require('../database/init');
 router.get('/', (req, res) => {
   // console.log(`test print module`);
 
-
-  let fakedata = [{
-      subject: "Swift",
-      teacher: "Thom",
-      state: true
-    },
-    {
-      subject: "NodeJS",
-      teacher: "Majdi",
-      state: false
-    },
-    {
-      subject: "Python",
-      teacher: "Cobra",
-      state: true
-    },
-    {
-      subject: "Go",
-      teacher: "Google",
-      state: false
-    }
-  ]
-
-
-
-  res.render('modules', { fakedata });
+  db.module.findAll().then((modules) => {
+    res.render('modules', {
+      modules
+    });
+  });
 });
 
-module.exports = router;
+module.exports = router
