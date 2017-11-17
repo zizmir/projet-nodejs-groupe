@@ -63,4 +63,4 @@ database/config.json
 
 # config itellij
 projet-nodejs-group.iml
-./idea
+/.idea
