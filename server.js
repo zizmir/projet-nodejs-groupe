@@ -9,6 +9,7 @@ const app = express();
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+const modules = require('./routes/modules');
 
 const port = process.argv[2] || '4242';
 app.engine('ejs', require('express-ejs-extend')); 
@@ -22,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', index);
 app.use('/users', users);
-
-// catch 404 and forward to error handler
+app.use('/modules', modules)
+  // catch 404 and forward to error handler
 app.use((req, res, next) => {
   let err = new Error('Not Found');
   err.status = 404;
